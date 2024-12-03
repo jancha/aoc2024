@@ -28,7 +28,7 @@ fn bench(times: usize, dir: &str, command: &str) -> i64 {
     let ms = (time_end - time_start).num_milliseconds();
 
     println!(
-        "Excuted {}, {} times, took: {} ms, average: {} ms, {} s",
+        "Executed {}, {} times, took: {} ms, average: {} ms, {} s",
         command,
         times,
         ms,
