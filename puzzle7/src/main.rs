@@ -23,7 +23,7 @@ fn get_words(file: &str) -> usize {
 }
 
 fn find_word(
-    lines: &Vec<&str>,
+    lines: &[&str],
     line: &str,
     line_len: usize,
     line_num: usize,

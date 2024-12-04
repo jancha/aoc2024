@@ -1,0 +1,13 @@
+[package]
+name = "puzzle8"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+debug = false
+strip = "symbols"
+lto = true
+
+[dependencies]
+regex = "1.11.1"
