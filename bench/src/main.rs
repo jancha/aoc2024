@@ -4,7 +4,7 @@ fn main() {
     let mut total = 0;
     let times = 100;
     let puzzles = 12;
-    for i in 1..=puzzles {
+    for i in 11..=puzzles {
         total += bench(
             times,
             &format!("../puzzle{i}"),

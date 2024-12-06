@@ -67,6 +67,7 @@ fn trace_path(file: &str) -> usize {
         start_y,
         (9999, 9999),
     );
+    let trace_binary_template = map.clone().as_bytes().to_vec();
 
     // put obstacles
     for y in 0..map_height {
@@ -79,7 +80,9 @@ fn trace_path(file: &str) -> usize {
                 // skip, not on initial path
                 continue;
             }
-            let mut trace_binary = map.clone().as_bytes().to_vec();
+            // clean trace
+            let mut trace_binary: Vec<u8> = trace_binary_template.iter().map(|_x| 0).collect();
+
             if walk_map(
                 map_binary,
                 &mut trace_binary,
@@ -219,6 +222,6 @@ fn move_guard(
 #[test]
 
 fn test_1() {
-    assert_eq!(trace_path("test.txt"), 41);
+    assert_eq!(trace_path("test.txt"), 6);
     assert_eq!(trace_path("input.txt"), 1812);
 }
