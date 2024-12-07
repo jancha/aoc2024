@@ -27,7 +27,7 @@ fn analyze(file: &str) -> u64 {
                 })
                 .collect();
 
-            if try_solve(target_val, &elements, *(elements.first().unwrap()), 1).is_some() {
+            if try_solve(&target_val, &elements, elements.first().unwrap(), 1).is_some() {
                 target_val
             } else {
                 0
@@ -36,7 +36,7 @@ fn analyze(file: &str) -> u64 {
         .sum()
 }
 
-fn try_solve(target_val: u64, elements: &Vec<u64>, prev_val: u64, index: usize) -> Option<u64> {
+fn try_solve(target_val: &u64, elements: &Vec<u64>, prev_val: &u64, index: usize) -> Option<u64> {
     let current_elem = elements[index];
 
     let new_add_val = prev_val + current_elem;
@@ -46,16 +46,18 @@ fn try_solve(target_val: u64, elements: &Vec<u64>, prev_val: u64, index: usize) 
     let new_concat_val = prev_val * multiplier + current_elem;
 
     if index < elements.len() - 1 {
-        match try_solve(target_val, elements, new_add_val, index + 1) {
-            None => match try_solve(target_val, elements, new_mul_val, index + 1) {
+        match try_solve(target_val, elements, &new_add_val, index + 1) {
+            None => match try_solve(target_val, elements, &new_mul_val, index + 1) {
                 Some(val) => Some(val),
-                None => try_solve(target_val, elements, new_concat_val, index + 1),
+                None => try_solve(target_val, elements, &new_concat_val, index + 1),
             },
             Some(val) => Some(val),
         }
-    } else if target_val == new_mul_val || target_val == new_add_val || target_val == new_concat_val
+    } else if *target_val == new_mul_val
+        || *target_val == new_add_val
+        || *target_val == new_concat_val
     {
-        Some(target_val)
+        Some(*target_val)
     } else {
         None
     }
