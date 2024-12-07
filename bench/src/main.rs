@@ -3,8 +3,8 @@ use std::process::Command;
 fn main() {
     let mut total = 0;
     let times = 100;
-    let puzzles = 12;
-    for i in 11..=puzzles {
+    let puzzles = 13;
+    for i in 13..=puzzles {
         total += bench(
             times,
             &format!("../puzzle{i}"),
