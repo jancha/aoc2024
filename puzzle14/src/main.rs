@@ -40,7 +40,6 @@ fn try_solve(target_val: u64, elements: &Vec<u64>, prev_val: u64, index: usize) 
     let current_elem = elements[index];
 
     let new_add_val = prev_val + current_elem;
-
     let new_mul_val = prev_val * current_elem;
 
     let multiplier: u64 = 10_u64.pow(current_elem.ilog(10_u64) + 1);
