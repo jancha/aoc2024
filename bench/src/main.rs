@@ -4,11 +4,11 @@ fn main() {
     let mut total = 0;
     let times = 100;
     let puzzles = 16;
-    for i in 13..=puzzles {
+    for i in 1..=puzzles {
         total += bench(
             times,
             &format!("../puzzle{i}"),
-            &format!("target/release/puzzle{i}"),
+            &format!("./target/release/puzzle{i}"),
         );
     }
     println!("Total: {}ms", total as f64 / times as f64);
