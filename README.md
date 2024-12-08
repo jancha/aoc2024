@@ -1,7 +1,7 @@
 # aoc2024
 Advent of code 2024
 
-# Performance results (updated 2024-12-04)
+# Performance results (updated 2024-12-08)
 
 1. Executed ./target/release/puzzle1, 100 times, took: 255 ms, average: 2.55 ms, 0.0025499999999999997 s
 2. Executed ./target/release/puzzle2, 100 times, took: 236 ms, average: 2.36 ms, 0.0023599999999999997 s
