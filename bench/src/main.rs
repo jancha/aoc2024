@@ -3,7 +3,7 @@ use std::process::Command;
 fn main() {
     let mut total = 0;
     let times = 100;
-    let puzzles = 16;
+    let puzzles = 17;
     for i in 1..=puzzles {
         total += bench(
             times,
