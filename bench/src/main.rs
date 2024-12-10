@@ -1,10 +1,20 @@
+use std::env;
 use std::process::Command;
 
 fn main() {
+    let args: Vec<_> = env::args().collect();
+
     let mut total = 0;
     let times = 100;
-    let puzzles = 17;
-    for i in 1..=puzzles {
+    let mut start = 1;
+    let mut end = 18;
+    if args.len() > 1 {
+        start = args.get(1).unwrap().parse().unwrap();
+    }
+    if args.len() > 2 {
+        end = args.get(2).unwrap().parse().unwrap();
+    }
+    for i in start..=end {
         total += bench(
             times,
             &format!("../puzzle{i}"),
