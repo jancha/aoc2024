@@ -7,7 +7,7 @@ fn main() {
     let mut total = 0;
     let times = 100;
     let mut start = 1;
-    let mut end = 18;
+    let mut end = 20;
     if args.len() > 1 {
         start = args.get(1).unwrap().parse().unwrap();
     }
