@@ -4,8 +4,6 @@ fn main() {
     println!("{}", analyze("input.txt", 25));
 }
 
-const CHAR_0: u8 = 48;
-
 fn analyze(file: &str, mutations: u8) -> usize {
     let file = fs::read_to_string(file).expect("Could not read file?");
     let map: Vec<&str> = file.trim().split(' ').collect();
