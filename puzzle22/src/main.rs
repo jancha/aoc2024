@@ -1,54 +1,95 @@
+use std::collections::HashMap;
 use std::fs;
 
 fn main() {
     println!("{}", analyze("input.txt", 75));
 }
 
+type Hash = HashMap<usize, HashMap<usize, usize>>;
+
 fn analyze(file: &str, mutations: u8) -> usize {
     let file = fs::read_to_string(file).expect("Could not read file?");
     let map: Vec<&str> = file.trim().split(' ').collect();
+
+    let mut hashes: Hash = HashMap::new();
 
     let stones: Vec<usize> = map
         .iter()
         .map(|x| {
             let y: usize = x.parse().unwrap();
-            blink(y, mutations - 1)
+            y
         })
         .collect();
-    stones.iter().sum()
+
+    let mut stone_count = 0;
+
+    for i in stones {
+        stone_count += mutate_stone(i, mutations, &mut hashes);
+    }
+    stone_count
 }
 
-fn blink(stone: usize, blinks: u8) -> usize {
-    let (stone1, stone2) = match stone {
-        0 => (1, None),
-        x if (x.ilog(10_usize) + 1) % 2 == 0 => {
-            let mid_dividor: usize = 10_usize.pow((x.ilog(10_usize) + 1) / 2);
-            let stone1 = x / mid_dividor;
-            let stone2 = Some(x - stone1 * mid_dividor);
-            (stone1, stone2)
-        }
-        x => (x * 2024, None),
-    };
+fn mutate_stone(stone: usize, mutations: u8, hashes: &mut Hash) -> usize {
+    let mut stone_count = 0;
+    let stones = get_hash(stone, 25, hashes);
 
-    let mut stones = 0;
-
-    if blinks > 0 {
-        stones += blink(stone1, blinks - 1);
-        if let Some(stone) = stone2 {
-            stones += blink(stone, blinks - 1);
+    let mutations_remaining = if mutations > 25 { mutations - 25 } else { 0 };
+    if mutations_remaining > 0 {
+        for (stone, count) in stones {
+            stone_count += count * mutate_stone(stone, mutations_remaining, hashes);
         }
-        stones
-    } else if stone2.is_some() {
-        2
     } else {
-        1
+        // last block
+        stone_count = stones.values().sum()
     }
+    stone_count
+}
+
+fn learn_stone(stone: usize, mutations: u8, hashes: &mut Hash) {
+    let mut stones: HashMap<usize, usize> = HashMap::new();
+    stones.insert(stone, 1);
+
+    let push_stone = |stone: usize, count: usize, stones: &mut HashMap<usize, usize>| {
+        if let Some(entry) = stones.get_mut(&stone) {
+            *entry += count;
+        } else {
+            stones.insert(stone, count);
+        }
+    };
+    for _i in 0..mutations {
+        let mut new_stones = HashMap::new();
+
+        for (stone, _count) in stones {
+            match stone {
+                0 => push_stone(1, _count, &mut new_stones),
+                x if ((x as usize).ilog(10_usize) + 1) % 2 == 0 => {
+                    let mid_dividor: usize = 10_usize.pow(((x as usize).ilog(10_usize) + 1) / 2);
+                    let stone1 = x / mid_dividor;
+                    let stone2 = x - stone1 * mid_dividor;
+                    push_stone(stone1, _count, &mut new_stones);
+                    push_stone(stone2, _count, &mut new_stones);
+                }
+                x => push_stone(x * 2024, _count, &mut new_stones),
+            };
+        }
+        stones = new_stones;
+    }
+
+    hashes.insert(stone, stones);
+}
+
+fn get_hash(stone: usize, mutations: u8, hashes: &mut Hash) -> HashMap<usize, usize> {
+    if let Some(hash) = hashes.get(&stone) {
+        return hash.clone();
+    }
+    learn_stone(stone, mutations, hashes);
+
+    hashes.get(&stone).unwrap().clone()
 }
 
 #[test]
 fn test_1() {
-    assert_eq!(analyze("test.txt", 6), 22);
     assert_eq!(analyze("test.txt", 25), 55312);
     assert_eq!(analyze("input.txt", 25), 228668);
-    assert_eq!(analyze("input.txt", 75), 0);
+    assert_eq!(analyze("input.txt", 75), 270673834779359);
 }

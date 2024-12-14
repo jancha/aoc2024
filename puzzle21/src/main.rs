@@ -16,8 +16,6 @@ fn analyze(file: &str, mutations: u8) -> usize {
         })
         .collect();
 
-    println!("{:#?}", stones);
-
     for _i in 0..mutations {
         let mut stones_new: Vec<usize> = vec![];
 
@@ -41,16 +39,13 @@ fn analyze(file: &str, mutations: u8) -> usize {
             }
         }
         stones = stones_new;
-
-        println!("After {} iteration: {}", _i, stones.len());
     }
     stones.len()
 }
 
 #[test]
 fn test_1() {
-    //assert_eq!(analyze("test.txt", 6), 22);
+    assert_eq!(analyze("test.txt", 6), 22);
     assert_eq!(analyze("test.txt", 25), 55312);
     assert_eq!(analyze("input.txt", 25), 228668);
-    assert_eq!(analyze("input.txt", 75), 0);
 }
