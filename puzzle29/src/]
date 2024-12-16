@@ -1,0 +1,93 @@
+use std::collections::{HashMap, HashSet};
+use std::fs;
+fn main() {
+    println!("{}", analyze("input.txt"));
+}
+
+const PLAYER: u8 = 64;
+const WALL: u8 = 35;
+const BOX: u8 = 79;
+
+const MOVE_LEFT: u8 = 60;
+const MOVE_RIGHT: u8 = 62;
+const MOVE_UP: u8 = 94;
+const MOVE_DOWN: u8 = 118;
+
+fn analyze(file: &str) -> usize {
+    let file = fs::read_to_string(file).expect("Could not read file?");
+    let data: Vec<&str> = file.trim().split("\n").collect();
+    let mut map: Vec<&str> = vec![];
+    let mut instructions: &str = "";
+
+    let mut stage = 0;
+    for i in data {
+        if i.is_empty() {
+            stage += 1;
+            continue;
+        }
+        if stage == 0 {
+            map.push(i);
+        } else {
+            instructions = i;
+        }
+    }
+
+    let map_width = map.first().unwrap().len();
+    let map_height = map.len();
+
+    let mut map_binary: Vec<u8> = map.join("").into();
+
+    let instructions = instructions.as_bytes();
+
+    println!(
+        "Map: {:?} Width: {:?} Height: {:?} Instructions: {:?}",
+        map_binary, map_width, map_height, instructions
+    );
+
+    let (mut pos, _char) = map_binary
+        .iter()
+        .enumerate()
+        .find(|(_x, y)| **y == PLAYER)
+        .unwrap();
+
+    println!("Start position: {:?}", index_to_xy(&pos, &map_width));
+
+    for i in instructions {
+        move_player(&mut pos, i, &mut map_binary, &map_width);
+    }
+
+    let gps: Vec<usize> = map_binary
+        .iter()
+        .filter(|v| **v == BOX)
+        .enumerate()
+        .map(|(i, _v)| {
+            let coords = index_to_xy(&i, &map_width);
+            coords.0 + coords.1 * 100
+        })
+        .collect();
+
+    gps.iter().sum()
+}
+
+fn move_player(pos: &mut usize, instruction: &u8, map_binary: &mut [u8], map_width: &usize) {
+    match *instruction {
+        MOVE_LEFT => try_move(pos-1, map_binary, map_width),
+        MOVE_RIGHT=> try_move(pos+1, map_binary, map_width),
+        MOVE_UP => try_move(pos-*map_width, map_binary, map_width),
+        MOVE_DOWN => try_move(pos+*map_width, map_binary, map_width),
+    }
+}
+
+fn index_to_xy(index: &usize, map_width: &usize) -> (usize, usize) {
+    (index % map_width, index / map_width)
+}
+fn xy_to_index(x: &usize, y: &usize, map_width: &usize) -> usize {
+    y * map_width + x
+}
+
+#[test]
+fn test_1() {
+    assert_eq!(analyze("test.txt"), 2028);
+    //    assert_eq!(analyze("test.txt"), 10092);
+    //    assert_eq!(analyze("input.txt"), 0);
+}
