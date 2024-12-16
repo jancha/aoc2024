@@ -175,7 +175,6 @@ fn index_to_xy(index: &usize, map_width: &usize) -> (usize, usize) {
 
 #[test]
 fn test_1() {
-    assert_eq!(analyze("test.txt"), 2028);
-    assert_eq!(analyze("test2.txt"), 10092);
-    assert_eq!(analyze("input.txt"), 1465152);
+    assert_eq!(analyze("test.txt"), 9021);
+    //   assert_eq!(analyze("input.txt"), 1465152);
 }
