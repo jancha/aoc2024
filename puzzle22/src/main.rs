@@ -30,19 +30,9 @@ fn analyze(file: &str, mutations: u8) -> usize {
 }
 
 fn mutate_stone(stone: usize, mutations: u8, hashes: &mut Hash) -> usize {
-    let mut stone_count = 0;
-    let stones = get_hash(stone, 25, hashes);
+    let stones = get_hash(stone, mutations, hashes);
 
-    let mutations_remaining = if mutations > 25 { mutations - 25 } else { 0 };
-    if mutations_remaining > 0 {
-        for (stone, count) in stones {
-            stone_count += count * mutate_stone(stone, mutations_remaining, hashes);
-        }
-    } else {
-        // last block
-        stone_count = stones.values().sum()
-    }
-    stone_count
+    stones.values().sum()
 }
 
 fn learn_stone(stone: usize, mutations: u8, hashes: &mut Hash) {
