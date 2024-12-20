@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use std::fs;
 fn main() {
     println!("{}", analyze("input.txt"));
@@ -135,11 +135,16 @@ fn analyze(file: &str) -> usize {
 
     // now perform path cost analysis, starting from the start node
 
-    let (start_index, start) = tiles.iter().find(|(_index, value)| value.start).unwrap();
-    let (end_index, end) = tiles.iter().find(|(_index, value)| value.finish).unwrap();
+    let (start_index, _start) = tiles.iter().find(|(_index, value)| value.start).unwrap();
+    let (end_index, _end) = tiles.iter().find(|(_index, value)| value.finish).unwrap();
 
     let mut min = 0;
 
+    let mut steps: Vec<usize> = vec![];
+
+    let mut solutions: Vec<(Vec<usize>, usize)> = vec![];
+
+    let mut unique = HashSet::new();
     walk_graph(
         &mut min,
         *start_index,
@@ -147,9 +152,15 @@ fn analyze(file: &str) -> usize {
         &mut tiles,
         &map_width,
         Direction::East,
+        &mut steps,
+        &mut solutions,
     );
-
-    min
+    for (path, _cost) in solutions.into_iter().filter(|(_path, cost)| *cost == min) {
+        for i in path {
+            unique.insert(i);
+        }
+    }
+    unique.len()
 }
 
 fn walk_graph(
@@ -159,9 +170,13 @@ fn walk_graph(
     tiles: &mut HashMap<usize, Tile>,
     map_width: &usize,
     direction: Direction,
+    steps: &mut Vec<usize>,
+    solutions: &mut Vec<(Vec<usize>, usize)>,
 ) {
     let tile = tiles.get(&start).unwrap();
     let cost = tile.cost;
+
+    steps.push(start);
 
     if start == end {
         if *min > 0 {
@@ -169,6 +184,12 @@ fn walk_graph(
         } else {
             *min = cost;
         }
+
+        if cost == *min {
+            let result_steps = steps.to_vec();
+            solutions.push((result_steps, cost));
+        }
+        steps.remove(steps.len() - 1);
         return;
     }
 
@@ -206,17 +227,26 @@ fn walk_graph(
         let new_cost = cost + step_cost;
 
         let rule2 = if let Some(linked_tile_cost) = linked_tile_cost {
-            linked_tile_cost > new_cost + 1
+            linked_tile_cost >= new_cost + 1
         } else {
             false
         };
         let next = tiles.get_mut(&new_index).unwrap();
 
-        let rule1 = next.cost > new_cost || next.cost == 0;
+        let rule1 = next.cost >= new_cost || next.cost == 0;
 
         if rule1 || rule2 {
             next.cost = new_cost;
-            walk_graph(min, new_index, end, tiles, map_width, new_direction);
+            walk_graph(
+                min,
+                new_index,
+                end,
+                tiles,
+                map_width,
+                new_direction,
+                steps,
+                solutions,
+            )
         }
     };
 
@@ -224,7 +254,7 @@ fn walk_graph(
         explore(start + 1, Direction::East, linked_tile_right_cost);
     }
     if tile_left {
-        explore(start - 1, Direction::West, linked_tile_left_cost);
+        explore(start - 1, Direction::West, linked_tile_left_cost)
     }
     if tile_up {
         explore(start - map_width, Direction::North, linked_tile_up_cost);
@@ -232,6 +262,7 @@ fn walk_graph(
     if tile_down {
         explore(start + map_width, Direction::South, linked_tile_down_cost);
     }
+    steps.remove(steps.len() - 1);
 }
 
 fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut HashMap<usize, Tile>) {
@@ -295,7 +326,7 @@ fn index_to_xy(index: &usize, map_width: &usize) -> (usize, usize) {
 
 #[test]
 fn test_1() {
-    assert_eq!(analyze("test.txt"), 7036);
-    assert_eq!(analyze("test2.txt"), 11048);
-    //assert_eq!(analyze("input.txt"), 88468);
+    assert_eq!(analyze("test.txt"), 45);
+    assert_eq!(analyze("test2.txt"), 64);
+    //assert_eq!(analyze("input.txt"), 616);
 }

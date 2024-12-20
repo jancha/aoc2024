@@ -5,7 +5,7 @@ fn main() {
     let args: Vec<_> = env::args().collect();
 
     let mut total = 0;
-    let times = 100;
+    let mut times = 100;
     let mut start = 1;
     let mut end = 32;
     if args.len() > 1 {
@@ -13,6 +13,9 @@ fn main() {
     }
     if args.len() > 2 {
         end = args.get(2).unwrap().parse().unwrap();
+    }
+    if args.len() > 3 {
+        times = args.get(3).unwrap().parse().unwrap();
     }
     for i in start..=end {
         total += bench(
