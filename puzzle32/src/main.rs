@@ -157,7 +157,9 @@ fn analyze(file: &str) -> usize {
     );
     for (path, _cost) in solutions.into_iter().filter(|(_path, cost)| *cost == min) {
         for i in path {
-            unique.insert(i);
+            if !unique.contains(&i) {
+                unique.insert(i);
+            }
         }
     }
     unique.len()
