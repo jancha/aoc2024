@@ -206,13 +206,13 @@ fn walk_graph(
         let new_cost = cost + step_cost;
 
         let rule2 = if let Some(linked_tile_cost) = linked_tile_cost {
-            linked_tile_cost > new_cost + 1
+            linked_tile_cost > new_cost + 1 && (new_cost + 1 < *min || *min == 0)
         } else {
             false
         };
         let next = tiles.get_mut(&new_index).unwrap();
 
-        let rule1 = next.cost > new_cost || next.cost == 0;
+        let rule1 = (next.cost > new_cost && (new_cost < *min || *min == 0)) || next.cost == 0;
 
         if rule1 || rule2 {
             next.cost = new_cost;
