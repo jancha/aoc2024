@@ -140,11 +140,12 @@ fn analyze(file: &str) -> usize {
 
     let mut min = 0;
 
-    let mut steps: Vec<usize> = vec![];
+    //let mut steps: Vec<usize> = vec![];
+    let mut steps: [usize; 20000] = [0; 20000];
 
     let mut solutions: Vec<(Vec<usize>, usize)> = vec![];
 
-    let mut unique = HashSet::new();
+    let mut unique: HashSet<usize> = HashSet::new();
     walk_graph(
         &mut min,
         *start_index,
@@ -152,12 +153,13 @@ fn analyze(file: &str) -> usize {
         &mut tiles,
         &map_width,
         Direction::East,
+        0,
         &mut steps,
         &mut solutions,
     );
     for (path, _cost) in solutions.into_iter().filter(|(_path, cost)| *cost == min) {
         for i in path {
-            if !unique.contains(&i) {
+            if i > 0 && !unique.contains(&i) {
                 unique.insert(i);
             }
         }
@@ -172,13 +174,14 @@ fn walk_graph(
     tiles: &mut HashMap<usize, Tile>,
     map_width: &usize,
     direction: Direction,
-    steps: &mut Vec<usize>,
+    step: usize,
+    steps: &mut [usize],
     solutions: &mut Vec<(Vec<usize>, usize)>,
 ) {
     let tile = tiles.get(&start).unwrap();
     let cost = tile.cost;
 
-    steps.push(start);
+    steps[step] = start;
 
     if start == end {
         if *min > 0 {
@@ -189,9 +192,11 @@ fn walk_graph(
 
         if cost == *min {
             let result_steps = steps.to_vec();
+            let result_steps: Vec<usize> =
+                result_steps.iter().filter(|x| **x > 0).copied().collect();
             solutions.push((result_steps, cost));
         }
-        steps.remove(steps.len() - 1);
+        steps[step] = 0;
         return;
     }
 
@@ -229,13 +234,13 @@ fn walk_graph(
         let new_cost = cost + step_cost;
 
         let rule2 = if let Some(linked_tile_cost) = linked_tile_cost {
-            linked_tile_cost >= new_cost + 1
+            linked_tile_cost >= new_cost + 1 && new_cost + 1 <= *min
         } else {
             false
         };
         let next = tiles.get_mut(&new_index).unwrap();
 
-        let rule1 = next.cost >= new_cost || next.cost == 0;
+        let rule1 = (next.cost >= new_cost && new_cost <= *min) || next.cost == 0;
 
         if rule1 || rule2 {
             next.cost = new_cost;
@@ -246,6 +251,7 @@ fn walk_graph(
                 tiles,
                 map_width,
                 new_direction,
+                step + 1,
                 steps,
                 solutions,
             )
@@ -264,7 +270,7 @@ fn walk_graph(
     if tile_down {
         explore(start + map_width, Direction::South, linked_tile_down_cost);
     }
-    steps.remove(steps.len() - 1);
+    steps[step] = 0;
 }
 
 fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut HashMap<usize, Tile>) {
