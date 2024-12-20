@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs;
 fn main() {
     println!("{}", analyze("input.txt"));
@@ -16,11 +17,46 @@ enum Direction {
     South,
 }
 
+impl Direction {
+    fn get_cost(&self, other: &Direction) -> usize {
+        match self {
+            Direction::East => match other {
+                Direction::East => 1,
+                Direction::West => 2002,
+                Direction::North => 1001,
+                Direction::South => 1001,
+            },
+            Direction::West => match other {
+                Direction::East => 2002,
+                Direction::West => 1,
+                Direction::North => 1001,
+                Direction::South => 1001,
+            },
+            Direction::North => match other {
+                Direction::East => 1001,
+                Direction::West => 1001,
+                Direction::North => 1,
+                Direction::South => 2001,
+            },
+            Direction::South => match other {
+                Direction::East => 1001,
+                Direction::West => 1001,
+                Direction::North => 2001,
+                Direction::South => 1,
+            },
+        }
+    }
+}
+
 #[derive(Debug, PartialEq)]
 struct Tile {
     start: bool,
     finish: bool,
     cost: usize,
+    cost_from_west: usize,
+    cost_from_east: usize,
+    cost_from_south: usize,
+    cost_from_north: usize,
     left: bool,
     right: bool,
     up: bool,
@@ -35,6 +71,10 @@ impl Tile {
             start,
             finish,
             cost: 0,
+            cost_from_west: 0,
+            cost_from_east: 0,
+            cost_from_south: 0,
+            cost_from_north: 0,
             left: false,
             right: false,
             up: false,
@@ -43,6 +83,7 @@ impl Tile {
             y,
         }
     }
+
     fn link_or_create(&mut self, x: usize, y: usize) {
         if x < self.x {
             self.left = true;
@@ -53,40 +94,6 @@ impl Tile {
         } else if y > self.y {
             self.down = true;
         }
-    }
-    fn get_left<'a>(&self, tiles: &'a Vec<Tile>) -> Option<&'a Tile> {
-        if !self.left {
-            return None;
-        }
-        tiles
-            .iter()
-            .find(|tile| tile.x == self.x - 1 && tile.y == self.y)
-    }
-    fn get_right<'a>(&self, tiles: &'a Vec<Tile>) -> Option<&'a Tile> {
-        if !self.right {
-            return None;
-        }
-        tiles
-            .iter()
-            .find(|tile| tile.x == self.x + 1 && tile.y == self.y)
-    }
-
-    fn get_up<'a>(&self, tiles: &'a Vec<Tile>) -> Option<&'a Tile> {
-        if !self.up {
-            return None;
-        }
-        tiles
-            .iter()
-            .find(|tile| tile.x == self.x && tile.y == self.y - 1)
-    }
-
-    fn get_down<'a>(&self, tiles: &'a Vec<Tile>) -> Option<&'a Tile> {
-        if !self.down {
-            return None;
-        }
-        tiles
-            .iter()
-            .find(|tile| tile.x == self.x && tile.y == self.y + 1)
     }
 }
 
@@ -122,246 +129,112 @@ fn analyze(file: &str) -> usize {
         }
     }
 
-    let mut tiles: Vec<Tile> = vec![];
+    let mut tiles: HashMap<usize, Tile> = HashMap::new();
 
     build_graph(&map_binary, &map_width, &mut tiles);
 
-    /*
-    let mut nodes: Vec<String> = vec![];
-    let mut links: Vec<String> = vec![];
-
-    for i in &tiles {
-        nodes.push(format!(
-            "{{id: \"n{}x{}\", x: {}, y: {}}}",
-            i.x, i.y, i.x, i.y
-        ));
-        if i.up {
-            links.push(format!(
-                "{{from: \"n{}x{}\", to: \"n{}x{}\"}}",
-                i.x,
-                i.y,
-                i.x,
-                i.y - 1
-            ));
-        }
-        if i.down {
-            links.push(format!(
-                "{{from: \"n{}x{}\", to: \"n{}x{}\"}}",
-                i.x,
-                i.y,
-                i.x,
-                i.y + 1
-            ));
-        }
-        if i.left {
-            links.push(format!(
-                "{{from: \"n{}x{}\", to: \"n{}x{}\"}}",
-                i.x,
-                i.y,
-                i.x - 1,
-                i.y,
-            ));
-        }
-        if i.right {
-            links.push(format!(
-                "{{from: \"n{}x{}\", to: \"n{}x{}\"}}",
-                i.x,
-                i.y,
-                i.x + 1,
-                i.y
-            ));
-        }
-    }
-
-    println!(
-        "let data = {{data: {{nodes: [{}], links: [{}]}}}};",
-        nodes.join(","),
-        links.join(",")
-    );*/
-
     // now perform path cost analysis, starting from the start node
 
-    let start = tiles.iter().find(|x| x.start).unwrap();
-    let end = tiles.iter().find(|x| x.finish).unwrap();
-    println!(
-        "Start {:?}, End {:?}, {} {}",
-        &start,
-        &end,
-        &map_width,
-        tiles.len()
-    );
+    let (start_index, start) = tiles.iter().find(|(_index, value)| value.start).unwrap();
+    let (end_index, end) = tiles.iter().find(|(_index, value)| value.finish).unwrap();
 
-    let cost = walk_graph(
-        start.x,
-        start.y,
-        end.x,
-        end.y,
+    let mut min = 0;
+
+    walk_graph(
+        &mut min,
+        *start_index,
+        *end_index,
         &mut tiles,
+        &map_width,
         Direction::East,
-        0,
     );
 
-    println!("Cost: {:?}", cost);
-
-    cost.unwrap()
+    min
 }
 
 fn walk_graph(
-    start_x: usize,
-    start_y: usize,
-    end_x: usize,
-    end_y: usize,
-    tiles: &mut Vec<Tile>,
+    min: &mut usize,
+    start: usize,
+    end: usize,
+    tiles: &mut HashMap<usize, Tile>,
+    map_width: &usize,
     direction: Direction,
-    level: usize,
-) -> Option<usize> {
-    let start = tiles
-        .iter()
-        .find(|tile| tile.x == start_x && tile.y == start_y)
-        .unwrap();
+) {
+    let tile = tiles.get(&start).unwrap();
+    let cost = tile.cost;
 
-    if start_x == end_x && start_y == end_y {
-        println!("Found end: {} {}", start.cost, level);
-        // panic!();
-        return Some(start.cost);
-    }
-
-    //    println!("level: {}", level);
-
-    let cost = start.cost;
-    let start_right = start.right;
-    let start_left = start.left;
-    let start_up = start.up;
-    let start_down = start.down;
-
-    let mut paths = vec![];
-    if start_right {
-        let step_cost = if direction == Direction::North || direction == Direction::South {
-            1000
-        } else if direction == Direction::West {
-            2000
+    if start == end {
+        if *min > 0 {
+            *min = cost.min(*min);
         } else {
-            0
-        } + 1;
-        //        println!("Right step cost: {} {} {}", start_x, start_y, step_cost);
-        let next = tiles
-            .iter_mut()
-            .find(|tile| tile.x == start_x + 1 && tile.y == start_y)
-            .unwrap();
-
-        if !next.start && (next.cost > cost + step_cost || next.cost == 0) {
-            next.cost = cost + step_cost;
-            if let Some(cost) = walk_graph(
-                next.x,
-                next.y,
-                end_x,
-                end_y,
-                tiles,
-                Direction::East,
-                level + 1,
-            ) {
-                paths.push(cost);
-            }
+            *min = cost;
         }
-    }
-    if start_left {
-        let step_cost = if direction == Direction::North || direction == Direction::South {
-            1000
-        } else if direction == Direction::East {
-            2000
-        } else {
-            0
-        } + 1;
-        //      println!("Left step cost: {} {} {}", start_x, start_y, step_cost);
-        let next = tiles
-            .iter_mut()
-            .find(|tile| tile.x == start_x - 1 && tile.y == start_y)
-            .unwrap();
-
-        if !next.start && (next.cost > cost + step_cost || next.cost == 0) {
-            next.cost = cost + step_cost;
-            if let Some(cost) = walk_graph(
-                next.x,
-                next.y,
-                end_x,
-                end_y,
-                tiles,
-                Direction::West,
-                level + 1,
-            ) {
-                paths.push(cost);
-            }
-        }
-    }
-    if start_up {
-        let step_cost = if direction == Direction::West || direction == Direction::East {
-            1000
-        } else if direction == Direction::South {
-            2000
-        } else {
-            0
-        } + 1;
-        //    println!("Up step cost: {} {} {}", start_x, start_y, step_cost);
-        let next = tiles
-            .iter_mut()
-            .find(|tile| tile.x == start_x && tile.y == start_y - 1)
-            .unwrap();
-
-        if !next.start && (next.cost > cost + step_cost || next.cost == 0) {
-            next.cost = cost + step_cost;
-            if let Some(cost) = walk_graph(
-                next.x,
-                next.y,
-                end_x,
-                end_y,
-                tiles,
-                Direction::North,
-                level + 1,
-            ) {
-                paths.push(cost);
-            }
-        }
-    }
-    if start_down {
-        let step_cost = if direction == Direction::West || direction == Direction::East {
-            1000
-        } else if direction == Direction::North {
-            2000
-        } else {
-            0
-        } + 1;
-        //  println!("Down step cost: {} {} {}", start_x, start_y, step_cost);
-        let next = tiles
-            .iter_mut()
-            .find(|tile| tile.x == start_x && tile.y == start_y + 1)
-            .unwrap();
-
-        if !next.start && (next.cost > cost + step_cost || next.cost == 0) {
-            next.cost = cost + step_cost;
-            if let Some(cost) = walk_graph(
-                next.x,
-                next.y,
-                end_x,
-                end_y,
-                tiles,
-                Direction::South,
-                level + 1,
-            ) {
-                paths.push(cost);
-            }
-        }
+        return;
     }
 
-    if paths.is_empty() {
+    let tile_right = tile.right;
+    let tile_left = tile.left;
+    let tile_up = tile.up;
+    let tile_down = tile.down;
+
+    let linked_tile_right_cost = if !tile_right {
         None
     } else {
-        //println!("Paths from: {} {}  {:?}", start_x, start_y, paths);
-        let min = paths.iter().min().unwrap();
-        Some(*min)
+        tiles.get(&(start + 2)).map(|next| next.cost)
+    };
+
+    let linked_tile_left_cost = if !tile_left {
+        None
+    } else {
+        tiles.get(&(start + 2)).map(|next| next.cost)
+    };
+
+    let linked_tile_up_cost = if !tile_up {
+        None
+    } else {
+        tiles.get(&(start - 2 * *map_width)).map(|next| next.cost)
+    };
+
+    let linked_tile_down_cost = if !tile_down {
+        None
+    } else {
+        tiles.get(&(start + 2 * *map_width)).map(|next| next.cost)
+    };
+
+    let mut explore = |new_index: usize, new_direction: Direction, linked_tile_cost| {
+        let step_cost = direction.get_cost(&new_direction);
+        let new_cost = cost + step_cost;
+
+        let rule2 = if let Some(linked_tile_cost) = linked_tile_cost {
+            linked_tile_cost > new_cost + 1
+        } else {
+            false
+        };
+        let next = tiles.get_mut(&new_index).unwrap();
+
+        let rule1 = next.cost > new_cost || next.cost == 0;
+
+        if rule1 || rule2 {
+            next.cost = new_cost;
+            walk_graph(min, new_index, end, tiles, map_width, new_direction);
+        }
+    };
+
+    if tile_right {
+        explore(start + 1, Direction::East, linked_tile_right_cost);
+    }
+    if tile_left {
+        explore(start - 1, Direction::West, linked_tile_left_cost);
+    }
+    if tile_up {
+        explore(start - map_width, Direction::North, linked_tile_up_cost);
+    }
+    if tile_down {
+        explore(start + map_width, Direction::South, linked_tile_down_cost);
     }
 }
 
-fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut Vec<Tile>) {
+fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut HashMap<usize, Tile>) {
     for (index, value) in map_binary.iter().enumerate() {
         if *value != WALL {
             let (x, y) = index_to_xy(&index, map_width);
@@ -384,7 +257,7 @@ fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut Vec<Tile>) {
                 let (x1, y1) = index_to_xy(&index, map_width);
                 tile.link_or_create(x1, y1);
             }
-            tiles.push(tile);
+            tiles.insert(index, tile);
         }
     }
 }
@@ -420,38 +293,9 @@ fn index_to_xy(index: &usize, map_width: &usize) -> (usize, usize) {
     (index % map_width, index / map_width)
 }
 
-/*fn move_index(
-    current_index: &usize,
-    instruction: &u8,
-    map_binary: &[u8],
-    map_width: &usize,
-) -> Option<usize> {
-    let new_index = match *instruction {
-        MOVE_LEFT => -1,
-        MOVE_RIGHT => 1,
-        MOVE_UP => -(*map_width as isize),
-        MOVE_DOWN => *map_width as isize,
-        _ => panic!("Invalid move"),
-    } + *current_index as isize;
-
-    if !in_bounds(new_index, map_binary) {
-        return None;
-    }
-    Some(new_index as usize)
-}
-
-fn print_map(map_binary: &[u8], map_width: &usize) {
-    for (i, v) in map_binary.iter().enumerate() {
-        if i % *map_width == 0 {
-            println!("");
-        }
-        print!("{}", *v as char);
-    }
-    println!("");
-}*/
 #[test]
 fn test_1() {
     assert_eq!(analyze("test.txt"), 7036);
     assert_eq!(analyze("test2.txt"), 11048);
- //   assert_eq!(analyze("input.txt"), 1465152);
+    //assert_eq!(analyze("input.txt"), 88468);
 }
