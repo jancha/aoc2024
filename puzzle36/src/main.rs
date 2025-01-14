@@ -62,15 +62,6 @@ fn analyze(file: &str, map_width: usize, map_height: usize, read_len: usize) -> 
     let start_index = 0;
     let end_index = map_width * map_height - 1;
 
-    /*solve_linear(
-        &data,
-        read_len,
-        start_index,
-        end_index,
-        map_width,
-        map_height,
-    )*/
-
     solve_quicksort(
         &data,
         read_len,
@@ -124,7 +115,6 @@ fn solve_quicksort(
         let mut tiles: HashMap<usize, Tile> = HashMap::new();
         let mut map_binary: Vec<u8> = vec![EMPTY; map_width * map_height];
 
-        println!("Start: {start}, end: {end}");
         build_map(data, map_width, start, end, &mut tiles, &mut map_binary);
 
         walk_graph(
@@ -141,93 +131,15 @@ fn solve_quicksort(
             last_found = end;
             split = (data_len - last_found) / 2;
             end += split;
-            println!("Found solution; {}", last_found - 1);
         } else {
             split = (end - last_found) / 2;
             end -= split;
-            println!("No solution so far");
         }
 
         if split == 0 {
-            print_map(&map_binary, map_width);
-            println!("Split is zero, braking");
-            println!(
-                "Last found: {}, Next bit: {:?}",
-                last_found - 1,
-                data.get(last_found).unwrap()
-            );
             return data.get(last_found).unwrap().to_string();
         }
     }
-}
-
-fn solve_linear(
-    data: &Vec<&str>,
-    read_len: usize,
-    start_index: usize,
-    end_index: usize,
-    map_width: usize,
-    map_height: usize,
-) -> String {
-    let mut min = 0;
-    let mut min_path: Vec<usize> = vec![];
-    let mut map_binary: Vec<u8> = vec![EMPTY; map_width * map_height];
-    let mut tiles: HashMap<usize, Tile> = HashMap::new();
-
-    build_map(data, map_width, 0, read_len, &mut tiles, &mut map_binary);
-
-    walk_graph(
-        &mut min,
-        &mut min_path,
-        [].to_vec(),
-        start_index,
-        end_index,
-        &mut tiles,
-        &map_width,
-    );
-
-    println!("Min: {min}, Min path: {:?}", min_path);
-
-    let mut prev = String::new();
-
-    for bit in 0..data.len() {
-        let start = 0;
-        let end = data.len() - bit;
-
-        let mut min = 0;
-        let mut min_path: Vec<usize> = vec![];
-        let mut tiles: HashMap<usize, Tile> = HashMap::new();
-        let mut map_binary: Vec<u8> = vec![EMPTY; map_width * map_height];
-
-        println!("Start: {start}, end: {end}");
-        build_map(data, map_width, start, end, &mut tiles, &mut map_binary);
-        print_map(&map_binary, map_width);
-
-        walk_graph(
-            &mut min,
-            &mut min_path,
-            [].to_vec(),
-            start_index,
-            end_index,
-            &mut tiles,
-            &map_width,
-        );
-
-        if min != 0 {
-            println!("Found solution; prev: {prev}, bit: {bit}");
-            return prev;
-        } else {
-            println!("No solution so far");
-        }
-
-        prev = data.get(end - 1).unwrap().to_string();
-    }
-
-    println!("Solution not found?");
-
-    // now try to find last index at which we stil have chance to find way
-
-    "".to_string()
 }
 
 fn walk_graph(
@@ -318,18 +230,6 @@ fn build_graph(map_binary: &[u8], map_width: &usize, tiles: &mut HashMap<usize, 
     }
 }
 
-fn print_map(map: &[u8], map_width: usize) {
-    for (index, val) in map.iter().enumerate() {
-        if index % map_width == 0 {
-            println!();
-        }
-        if *val == WALL {
-            print!("#");
-        } else {
-            print!(".");
-        }
-    }
-}
 fn get_neighbour(
     index: usize,
     direction: Direction,
