@@ -5,9 +5,9 @@ fn main() {
     let args: Vec<_> = env::args().collect();
 
     let mut total = 0;
-    let mut times = 100;
+    let mut times = 10;
     let mut start = 1;
-    let mut end = 32;
+    let mut end = 36;
     if args.len() > 1 {
         start = args.get(1).unwrap().parse().unwrap();
     }
