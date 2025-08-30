@@ -1,0 +1,2480 @@
+
+running 1 test
+Pad 0 Found paths: [['<', '^', '<', '^'], ['<', '^', '^', '<'], ['^', '<', '<', '^'], ['^', '<', '^', '<'], ['^', '^', '<', '<']]
+Pad 1     Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'v' (4) from 3: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 2
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['<', 'v', '<'] is 8
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '<' (3) from 3: ['A']
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 1
+Pad 1    Total len for path: 1 ['v', '<', '<'] is 6
+Pad 1    Path to target '<' (3) from 2: ['v', '<', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '<' (3) from 3: ['A']
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 10
+Pad 1     Found paths: [['>', '^']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 1    Path to target '^' (1) from 3: ['>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 7
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 1     Found paths: [['>', '^']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 1    Path to target '^' (1) from 3: ['>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 7
+Pad 0Total len for path: 0 ['<', '^', '<', '^'] is 33
+Pad 1     Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'v' (4) from 3: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 2
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['<', 'v', '<'] is 8
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '<' (3) from 3: ['A']
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 1
+Pad 1    Total len for path: 1 ['v', '<', '<'] is 6
+Pad 1    Path to target '<' (3) from 2: ['v', '<', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '<' (3) from 3: ['A']
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 10
+Pad 1     Found paths: [['>', '^']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 1    Path to target '^' (1) from 3: ['>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 7
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '^' (1) from 1: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 1
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 0Total len for path: 1 ['<', '^', '^', '<'] is 27
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target '^' (1) from 2: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 8
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '<' (3) from 3: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 1
+Pad 1     Found paths: [['>', '^']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 1    Path to target '^' (1) from 3: ['>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 7
+Pad 0Total len for path: 2 ['^', '<', '<', '^'] is 25
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target '^' (1) from 2: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 8
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 1     Found paths: [['>', '^']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 1    Path to target '^' (1) from 3: ['>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 7
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 0Total len for path: 3 ['^', '<', '^', '<'] is 33
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target '^' (1) from 2: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 8
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '^' (1) from 1: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char ^: 1
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 9
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '<' (3) from 3: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char <: 1
+Pad 0Total len for path: 4 ['^', '^', '<', '<'] is 19
+Pad 0Path to target '4' (3) from 11: ['^', '^', '<', '<', 'A']
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target '^' (1) from 2: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '^' (1) from 1: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [['v', '<']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 0 ['v', '<'] is 5
+Pad 1    Path to target '<' (3) from 1: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '<' (3) from 3: ['A']
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '>' (5) from 5: ['A']
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 1
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '>', '^'] is 6
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 2         Found paths: [['>', 'v'], ['v', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['>', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['v', '>'] is 2
+Pad 2        Path to target '>' (5) from 1: ['>', 'v', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 3
+Pad 1    Total len for path: 1 ['>', '^', '>'] is 8
+Pad 1    Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target '>' (5) from 5: ['A']
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Numeric part: 400 Len: 27
+
+
+Pad 0 Found paths: [['>', '>', 'v', 'v'], ['>', 'v', '>', 'v'], ['>', 'v', 'v', '>'], ['v', '>', '>', 'v'], ['v', '>', 'v', '>']]
+Pad 1     Found paths: [['v']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 1    Total len for path: 0 ['v'] is 3
+Pad 1    Path to target '>' (5) from 2: ['v', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '^'], ['^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['^', '>'] is 2
+Pad 2        Path to target 'A' (2) from 4: ['>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 6
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '>' (5) from 5: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 1
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target 'v' (4) from 4: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 1
+Pad 0Total len for path: 0 ['>', '>', 'v', 'v'] is 16
+Pad 1     Found paths: [['v']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 1    Total len for path: 0 ['v'] is 3
+Pad 1    Path to target '>' (5) from 2: ['v', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '^'], ['^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['^', '>'] is 2
+Pad 2        Path to target 'A' (2) from 4: ['>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 6
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 1     Found paths: [['>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 1    Total len for path: 0 ['>'] is 2
+Pad 1    Path to target '>' (5) from 4: ['>', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['^']]
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['^'] is 1
+Pad 2        Path to target 'A' (2) from 5: ['^', 'A']
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 4
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 0Total len for path: 1 ['>', 'v', '>', 'v'] is 26
+Pad 1     Found paths: [['v']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 1    Total len for path: 0 ['v'] is 3
+Pad 1    Path to target '>' (5) from 2: ['v', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '^'], ['^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['^', '>'] is 2
+Pad 2        Path to target 'A' (2) from 4: ['>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 6
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target 'v' (4) from 4: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 1
+Pad 1     Found paths: [['>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 1    Total len for path: 0 ['>'] is 2
+Pad 1    Path to target '>' (5) from 4: ['>', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['^']]
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['^'] is 1
+Pad 2        Path to target 'A' (2) from 5: ['^', 'A']
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 4
+Pad 0Total len for path: 2 ['>', 'v', 'v', '>'] is 19
+Pad 1     Found paths: [['<', 'v'], ['v', '<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'v' (4) from 3: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 2
+Pad 1    Total len for path: 0 ['<', 'v'] is 6
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 1 ['v', '<'] is 5
+Pad 1    Path to target 'v' (4) from 2: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 9
+Pad 1     Found paths: [['>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 1    Total len for path: 0 ['>'] is 2
+Pad 1    Path to target '>' (5) from 4: ['>', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['^']]
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['^'] is 1
+Pad 2        Path to target 'A' (2) from 5: ['^', 'A']
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 4
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '>' (5) from 5: ['A']
+Pad 2         Found paths: [[]]
+Pad 2        Total len for path: 0 [] is 0
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 1
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 0Total len for path: 3 ['v', '>', '>', 'v'] is 22
+Pad 1     Found paths: [['<', 'v'], ['v', '<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 2         Found paths: [['>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 0 ['>'] is 1
+Pad 2        Path to target 'v' (4) from 3: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 2
+Pad 1    Total len for path: 0 ['<', 'v'] is 6
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 2
+Pad 1    Total len for path: 1 ['v', '<'] is 5
+Pad 1    Path to target 'v' (4) from 2: ['v', '<', 'A']
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '<' (3) from 4: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 9
+Pad 1     Found paths: [['>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 1    Total len for path: 0 ['>'] is 2
+Pad 1    Path to target '>' (5) from 4: ['>', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['^']]
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['^'] is 1
+Pad 2        Path to target 'A' (2) from 5: ['^', 'A']
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 4
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '>', '^'], ['>', '^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '>', '^'] is 3
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['>', '^', '>'] is 3
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char v: 8
+Pad 1     Found paths: [['>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 1    Total len for path: 0 ['>'] is 2
+Pad 1    Path to target '>' (5) from 4: ['>', 'A']
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['^']]
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['^'] is 1
+Pad 2        Path to target 'A' (2) from 5: ['^', 'A']
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 0Len for char >: 4
+Pad 0Total len for path: 4 ['v', '>', 'v', '>'] is 25
+Pad 0Path to target 'A' (11) from 3: ['>', '>', 'v', 'v', 'A']
+Pad 1     Found paths: [['v']]
+Pad 2         Found paths: [['<', 'v'], ['v', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['<', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<'] is 2
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char v: 3
+Pad 1    Total len for path: 0 ['v'] is 3
+Pad 1    Path to target '>' (5) from 2: ['v', 'A']
+Pad 2        Path to target 'v' (4) from 2: ['<', 'v', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2         Found paths: [['>', '^'], ['^', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['>', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['^', '>'] is 2
+Pad 2        Path to target 'A' (2) from 4: ['>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target '>' (5) from 5: ['A']
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [['<']]
+Pad 2         Found paths: [['<', 'v', '<'], ['v', '<', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<', 'v', '<'] is 3
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['v', '<', '<'] is 3
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char <: 4
+Pad 1    Total len for path: 0 ['<'] is 4
+Pad 1    Path to target 'v' (4) from 5: ['<', 'A']
+Pad 2        Path to target '<' (3) from 2: ['<', 'v', '<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 2        Path to target 'A' (2) from 3: ['>', '>', '^', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '>'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [[]]
+Pad 1    Total len for path: 0 [] is 0
+Pad 1    Path to target 'v' (4) from 4: ['A']
+Pad 2        Path to target 'A' (2) from 2: ['A']
+Pad 3             Human pushed 'A'
+Pad 1     Found paths: [['>', '^'], ['^', '>']]
+Pad 2         Found paths: [['v']]
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['v'] is 1
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 2
+Pad 2         Found paths: [['<', '^'], ['^', '<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 2        Total len for path: 0 ['<', '^'] is 2
+Pad 3             Human pushed '^'
+Pad 2        Len for char ^: 1
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 1 ['^', '<'] is 2
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 3
+Pad 1    Total len for path: 0 ['>', '^'] is 5
+Pad 2         Found paths: [['<']]
+Pad 3             Human pushed '<'
+Pad 2        Len for char <: 1
+Pad 2        Total len for path: 0 ['<'] is 1
+Pad 2        Path to target '^' (1) from 2: ['<', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char ^: 2
+Pad 2         Found paths: [['>', 'v'], ['v', '>']]
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 2        Total len for path: 0 ['>', 'v'] is 2
+Pad 3             Human pushed 'v'
+Pad 2        Len for char v: 1
+Pad 3             Human pushed '>'
+Pad 2        Len for char >: 1
+Pad 2        Total len for path: 1 ['v', '>'] is 2
+Pad 2        Path to target '>' (5) from 1: ['>', 'v', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 1    Len for char >: 3
+Pad 1    Total len for path: 1 ['^', '>'] is 5
+Pad 1    Path to target 'A' (2) from 4: ['>', '^', 'A']
+Pad 2        Path to target '>' (5) from 2: ['v', 'A']
+Pad 3             Human pushed 'v'
+Pad 3             Human pushed 'A'
+Pad 2        Path to target '^' (1) from 5: ['<', '^', 'A']
+Pad 3             Human pushed '<'
+Pad 3             Human pushed '^'
+Pad 3             Human pushed 'A'
+Pad 2        Path to target 'A' (2) from 1: ['>', 'A']
+Pad 3             Human pushed '>'
+Pad 3             Human pushed 'A'
+Numeric part: 400 Len: 23
+
+
+Final result: 20000
+test test_1 ... FAILED
+
+failures:
+
+failures:
+    test_1
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
